@@ -1,0 +1,6 @@
+.DS_Store
+*.ipa
+*.deb
+build/
+node_modules/
+publish.sh
