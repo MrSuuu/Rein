@@ -16,9 +16,15 @@
 
 安装包**不含 Apple SDK**（SDK 许可禁止再分发），编译插件前要自己导入一份：
 
-1. 把 `ReinSDK-all.zip`（16.5 / 17.0 / 26.5 三份）放进「文件」App → 我的 iPhone → Rein
-2. App 内：工具台 → 组件管理 → 导入 SDK → 选中那个 zip
-3. 状态变成「3 个 · 当前 xx」即可
+SDK 由 Apple 随 Xcode 提供，**我们不能代为分发**，请从自己的 Xcode 里取：
+
+1. Mac 上打开路径：
+   `/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/`
+2. 把其中的 `iPhoneOS.sdk` 文件夹拷到「文件」App → 我的 iPhone → Rein
+3. App 内：工具台 → 组件管理 → 导入 SDK → 选中这个文件夹（也可以先压成 zip 再导入）
+4. 支持多份共存（16.5 / 17.0 / 26.5 都可以导入，随时切换）
+
+> 没有 Xcode 也能从其他来源获取，但请自行确认许可，我们不对第三方来源负责。
 
 不导入也能用：聊天、终端、视觉工具、图片/视频处理、表格、git_lite 都不依赖 SDK。
 
