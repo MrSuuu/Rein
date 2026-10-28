@@ -3,7 +3,7 @@
 把 DeepSeek dsh 装进 iPhone：**聊天、终端、插件市场、视觉/媒体工具**，全部在本机跑，不依赖电脑。
 
 [![下载 Rein.ipa](https://img.shields.io/badge/%E4%B8%8B%E8%BD%BD-Rein.ipa%20%C2%B7%20281MB-2ea44f?style=for-the-badge&logo=apple)](https://github.com/MrSuuu/Rein/releases/latest/download/Rein.ipa)
-[![版本](https://img.shields.io/badge/%E7%89%88%E6%9C%AC-0.2.2%20Preview-blue?style=flat-square)](https://github.com/MrSuuu/Rein/releases)
+[![版本](https://img.shields.io/badge/%E7%89%88%E6%9C%AC-0.3.0-blue?style=flat-square)](https://github.com/MrSuuu/Rein/releases)
 [![要求](https://img.shields.io/badge/%E8%A6%81%E6%B1%82-iOS%2015--17%20%C2%B7%20TrollStore-lightgrey?style=flat-square)](#安装)
 
 > 点上面的绿色按钮直接下载安装包；打不开就到 [Releases](https://github.com/MrSuuu/Rein/releases) 页面下 `Rein.ipa`。
@@ -48,6 +48,15 @@
 
 不配任何 API 也能跑：视觉走 Apple Vision 离线识别，生图退化为本地渲染。
 配了多模态 / 生图 API 后，`vision_describe` / `image_generate` 会自动升级。
+
+## 离开 App 之后
+
+- **完成通知**：退到后台或锁屏时，任务结束收到横幅（前台不打扰）；异常退出会带 `exit=N`
+- **实时卡片**：锁屏与灵动岛显示「会话名 + 运行计时」，计时由系统自走，任务结束 3 秒后消失
+- **后台不中断**：静音保活用 `AVAudioEngine` 撑着 `audio` 后台模式，切走也能跑完
+
+> ⚠️ 首次安装或版本更新后**重启一次设备**：实时卡片依赖被系统注册的 widget 扩展，
+> TrollStore 覆盖安装不会重新注册它。
 
 ## 模型能力：按服务端真实数据来
 
